@@ -13,4 +13,5 @@ provider aws {
 
 resource "aws_eip" "teraform-gen-eip" {
   domain           = "vpc"
+  
 }
