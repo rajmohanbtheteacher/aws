@@ -27,7 +27,7 @@ data "aws_vpc" "existing" {
 
 resource "aws_security_group" "cross-attr-sg" {
   name = "Cross-attribute-demo-terraform"
-  description = "Demo Security Group Creation Using Terraform"
+  description = "Demo Security Group Creation Using Terraforms"
   vpc_id      = data.aws_vpc.existing.id
 
   tags = {
