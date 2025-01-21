@@ -7,3 +7,17 @@
 # terraform plan -var-file="prod.tfvars"
 
 # terraform apply -var-file="prod.tfvars"
+
+# Variables are declared in configuration, they can be ser in a number of ways:
+1. Variable Defaults
+2. Variable Definition File (*.tfvars)
+3. Environment Variables 
+4. Setting Variables in the Command line
+
+# We have discussed 1st and 2nd option, 3rd Option is Envoironmental Variable
+# Terraform searches the environment of its own process for environment varables named TF_VAR_followed by the name of a declared variable.
+1.  Set the environmental variable using export command
+    a. Exaple: $ export TF_VAR_instance_type=m5.large
+2. Now execute both plan and apply, it will take the variable from set enviornment value.
+ 
+
