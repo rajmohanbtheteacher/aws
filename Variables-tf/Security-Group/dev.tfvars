@@ -1,0 +1,6 @@
+vpc_id = "vpc-0ddd9a547674d4320"
+region = "us-east-1"
+app_web_port = "80"
+app_ssh_port = "22"
+ip_protocol = "tcp"
+allow_all = "-1"
