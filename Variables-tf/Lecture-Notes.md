@@ -20,4 +20,11 @@
     a. Exaple: $ export TF_VAR_instance_type=m5.large
 2. Now execute both plan and apply, it will take the variable from set enviornment value.
  
+# values for vairable can be define at multiple different places. But What if Valeues of a vairable are different?
+# Terraform loads variables in the folowing order, with later source taking precedence over earlier ones:
+1. Environment Variables (Priority-5)
+2. The terraform.tfvars file, if present (Priority-4)
+3. The terraform.tfvars.json file, if present (Priority-3)
+4. Any *.auto.tfvars OR *.aurotfvards.json files, processed in lexical order of their filenames (Priority-2)
+5. Any -var and -var-file switches used in command line (Priority-1)
 
