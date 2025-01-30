@@ -14,3 +14,7 @@ tags = {
   }
 
 }
+
+resource "aws_iam_user" "Developers" {
+  name = var.dev-names[count.index]
+}
