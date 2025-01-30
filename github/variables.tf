@@ -1,5 +1,4 @@
 variable "repo_name" {}
-variable "github_token" {}
 variable "instance_type" {}
 variable "ami-used" {}
 variable "vpc_id" {}

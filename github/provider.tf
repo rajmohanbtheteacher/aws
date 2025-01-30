@@ -14,6 +14,11 @@ provider "aws" {
   region = "us-east-1"
 }
 
+data "aws_ssm_parameter" "github_token" {
+  name            = "/github/token"
+  with_decryption = true
+}
+
 provider "github" {
- token = var.github_token
+  token = data.aws_ssm_parameter.github_token.value
 }
