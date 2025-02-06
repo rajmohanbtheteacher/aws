@@ -20,12 +20,12 @@ resource "aws_iam_group_membership" "group_membership" {
   users = [aws_iam_user.user.name]
 }
 
-# Create IAM Policy from external JSON file
+# Create IAM Policy from external JSON file using File() Function
 resource "aws_iam_policy" "policy" {
   name        = "EC2_VPC_Full_Access"
   description = "Grants EC2 and VPC full access, except delete actions"
-  policy      = file(var.policy_file_path)
-}
+  policy      = file(var.policy_file_path) 
+  }
 
 # Attach Policy to the Group
 resource "aws_iam_policy_attachment" "group_policy_attachment" {
