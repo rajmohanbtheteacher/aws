@@ -1,0 +1,6 @@
+ami_id           = "ami-04b4f1a9cf54c11d0"
+instance_type    = "t2.micro"
+private_subnet_ids = ["10.0.3.0/24", "10.0.4.0/24"]
+min_size         = 1
+desired_capacity = 2
+max_size         = 4
