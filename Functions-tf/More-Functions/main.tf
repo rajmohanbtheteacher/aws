@@ -159,7 +159,7 @@ resource "aws_instance" "bastion" {
 #  })
 #}#
 data "aws_secretsmanager_secret" "rds_secret" {
-  name = "res_secret_tf"  # Replace with your actual secret name
+  name = "rds_secret_auto"  # Replace with your actual secret name
 }
 
 data "aws_secretsmanager_secret_version" "rds_secret_value" {
