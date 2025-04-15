@@ -22,6 +22,6 @@ variable "instance_type" {
 }
 
 variable "ami_id" {
-  description = "Ubuntu AMI ID"
-  default     = "ami-0c55b159cbfafe1f0"  # Replace with latest for your region
+  description = "Travel App Custom AMI"
+  default     = "ami-09c918c6f7ecc32ef"  # Replace with latest for your region
 }
