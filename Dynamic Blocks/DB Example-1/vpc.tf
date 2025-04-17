@@ -55,12 +55,13 @@ resource "aws_security_group" "web_sg" {
   name        = "web-sg"
   description = "Allow inbound HTTP, SSH"
   vpc_id      = aws_vpc.main_vpc.id
-
+  
   dynamic "ingress" {
     for_each = var.ingress_ports
+    iterator = port
     content {
-      from_port   = ingress.value
-      to_port     = ingress.value
+      from_port   = port.value
+      to_port     = port.value
       protocol    = "tcp"
       cidr_blocks = ["0.0.0.0/0"]
     }
